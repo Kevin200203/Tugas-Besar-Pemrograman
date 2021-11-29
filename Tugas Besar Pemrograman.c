@@ -15,7 +15,3 @@ DESKRIPSI : Program Pembuatan Game Windows console Tic Tac Toe
 #include <stdlib.h>  //   merupakan header file untuk standar library
 #include <MMsystem.h> // merupakan library yang menyediakan serangkaian fungsi fungsi yang terkait dengan sistem operasi
 
-
-//ku ngubah file ni vin coba hapus nanti ni bari kode nya
-// ni vin ku ubah
-//wd
