@@ -1,4 +1,3 @@
-//header yang digunakan untuk standar input output di bahasa c
 #include <stdio.h>
 #include <string.h>
 #include <windows.h>
@@ -26,8 +25,10 @@ int main()
     getchar();
     system("cls");
     menu :
-        printf("\n\t SILAHKAN PILIH MENU DIBAWAH INI");
-        printf("\n\n 1.DAFTAR AKUN\n 2.LOGIN \n 3. KELUAR\n PILIH MENU :");
+        printf("\n\t SILAHKAN PILIH MENU DIBAWAH INI\n\n");
+        printf("1.DAFTAR AKUN                       2.Login                    3.Keluar \n\n");
+        printf("=============");
+        printf("PILIH MENU :");
         scanf("%d", &menu);
         system("cls");
         switch(menu)
@@ -39,7 +40,7 @@ int main()
 				printf("file gagal diciptakan!\n");
 				exit(1);
 			}
-            printf("\n\t|SILAHKAN LANJUTKAN UNTUK MEMBUAT AKUN\n");
+            printf("\n\t|SILAHKAN LANJUTKAN UNTUK MEMBUAT AKUN|\n");
             printf("nama depan anda : ");
             scanf("%s", namad);
             printf("nama belakang anda : ");
@@ -104,6 +105,8 @@ int main()
         printf("|Nama Belakang : %s         \n", namab);
         printf("|Email : %s                 \n", email);
         break;
+    case 3 :
+        exit(0);
     default :
         printf("\n\njalan-jalan ke gorontalo\n");
         printf("bagus bagus isi bro\n");
