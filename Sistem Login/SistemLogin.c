@@ -17,16 +17,18 @@ int main()
     printf("\t\t  |==============SELAMAT DATANG DI PROGRAM MINI GAME SEDERHANA========|\n");
     printf("\t\t  |                                                                   |\n");
     printf("\t\t  |Program disusun dan dibuat oleh:                                   |\n");
-    printf("\t\t  |               1. I Gede Ari Wisnu Sanjaya  (2105551047)           |\n");
-    printf("\t\t  |               2. Kevin Siringoringo        (2105551031)           |\n");
+	printf("\t\t  |               1. I Gede Ari Wisnu Sanjaya (2105551047)            |\n");
+	printf("\t\t  |               2. Kevin Siringoringo       (2105551031)            |\n");
     printf("\t\t  |===================================================================|\n\n");
     printf("\t\t\tProgram Ini Dibuat Untuk Memenuhi Tugas Besar Pemrograman\n\t");
     printf("\t\t\tTekan ENTER untuk melanjutkan");
     getchar();
     system("cls");
     menu :
-        printf("\n\t SILAHKAN PILIH MENU DIBAWAH INI");
-        printf("\n\n 1.DAFTAR AKUN\n 2.LOGIN \n 3. KELUAR\n PILIH MENU :");
+        printf("\n\t SILAHKAN PILIH MENU DIBAWAH INI\n\n");
+        printf("1.DAFTAR AKUN                       2.Login                    3.Keluar \n\n");
+        printf("=============");
+        printf("PILIH MENU :");
         scanf("%d", &menu);
         system("cls");
         switch(menu)
@@ -38,7 +40,7 @@ int main()
 				printf("file gagal diciptakan!\n");
 				exit(1);
 			}
-            printf("\n\t|SILAHKAN LANJUTKAN UNTUK MEMBUAT AKUN\n");
+            printf("\n\t|SILAHKAN LANJUTKAN UNTUK MEMBUAT AKUN|\n");
             printf("nama depan anda : ");
             scanf("%s", namad);
             printf("nama belakang anda : ");
@@ -98,11 +100,13 @@ int main()
         printf("\t\t\t \n\nAnda Berhasil Login\n\n");
 
 
-        printf("|===========================Welcome to our mini game SnakeCross======================|\n");
+        printf("|===========================welcome to  our SnakeCross mini game %s======================|\n", nama);
         printf("|Nama Depan : %s            \n", namad);
         printf("|Nama Belakang : %s         \n", namab);
         printf("|Email : %s                 \n", email);
         break;
+    case 3 :
+        exit(0);
     default :
         printf("\n\njalan-jalan ke gorontalo\n");
         printf("bagus bagus isi bro\n");
