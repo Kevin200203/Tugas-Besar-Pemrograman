@@ -55,8 +55,9 @@ int main()
     if (1 == 1)
     {
         printf("==>pemain %d menang", --pemain);
-        
-    }
+        //sesuaikan path dengan tempat file win.wav
+        PlaySound(TEXT("win.wav"),NULL,SND_SYNC);
+        }
     else
     {
         printf("==> permainan seri");
