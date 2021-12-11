@@ -4,3 +4,6 @@
 #include <stdlib.h>
 #include <mmsystem.h>
 #include "function.h"
+
+int cekMenang();
+void menampilkanPapan();
