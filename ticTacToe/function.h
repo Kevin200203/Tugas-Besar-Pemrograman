@@ -1,0 +1,1 @@
+extern char kotak[10];
