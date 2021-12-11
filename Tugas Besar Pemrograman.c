@@ -99,7 +99,7 @@ int main()
         printf("\t\t\t \n\nAnda Berhasil Login\n\n");
 
 
-        printf("|===========================Welcome to our mini game SnakeCross======================|\n");
+        printf("|===========================welcome to  our SnakeCross mini game %s======================|\n", nama);
         printf("|Nama Depan : %s            \n", namad);
         printf("|Nama Belakang : %s         \n", namab);
         printf("|Email : %s                 \n", email);
