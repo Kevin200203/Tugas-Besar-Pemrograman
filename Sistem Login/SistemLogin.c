@@ -17,8 +17,8 @@ int main()
     printf("\t\t  |==============SELAMAT DATANG DI PROGRAM MINI GAME SEDERHANA========|\n");
     printf("\t\t  |                                                                   |\n");
     printf("\t\t  |Program disusun dan dibuat oleh:                                   |\n");
-    printf("\t\t  |               1. I Gede Ari Wisnu Sanjaya (2105551047)            |\n");
-    printf("\t\t  |               2. Kevin Siringoringo       (2105551031)            |\n");
+    printf("\t\t  |               1. I Gede Ari Wisnu Sanjaya  (2105551047)           |\n");
+    printf("\t\t  |               2. Kevin Siringoringo        (2105551031)           |\n");
     printf("\t\t  |===================================================================|\n\n");
     printf("\t\t\tProgram Ini Dibuat Untuk Memenuhi Tugas Besar Pemrograman\n\t");
     printf("\t\t\tTekan ENTER untuk melanjutkan");
