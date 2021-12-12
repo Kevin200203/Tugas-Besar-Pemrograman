@@ -56,7 +56,7 @@ int main()
     {
         printf("==>pemain %d menang", --pemain);
         //sesuaikan path dengan tempat file win.wav
-        PlaySound(TEXT("win.wav"),NULL,SND_SYNC);
+        PlaySound(TEXT("D:\\tugasBesarPemrog\\Tugas-Besar-Pemrograman\\win.wav"), NULL, SND_SYNC);
         }
     else
     {
