@@ -10,7 +10,7 @@ int main()
     char nama[25],namad[25],namab[25],email[25];
     char password[25],listPassword[20][25],listUsername[20][25];
     bool cekUser;
-    FILE *pf;
+    FILE *filelatihan;
     printf("\n\n");
     printf("\t\t  |===================================================================|\n");
     printf("\t\t  |===========================SnakeCross Mini Game====================|\n|");
@@ -35,7 +35,7 @@ int main()
         {
     case 1:
 
-        if((pf=fopen("latihan.txt","w"))== NULL)
+        if((filelatihan=fopen("latihan.txt","a"))== NULL)
             {
 				printf("file gagal diciptakan!\n");
 				exit(1);
@@ -51,11 +51,13 @@ int main()
             printf("\t\t\t\t\t| SELAMAT DATA ANDA BERHASIL DIBUAT|\n");
             printf("\t\t\t\t\t|Username : ");
             scanf("%s", nama);
+            fflush(stdin);
             printf("\t\t\t\t\tBuat Password :");
             scanf("%s", password);
-            strcpy(listUsername[member], nama);
-            strcpy(listPassword[member], password);
+            strcpy(listUsername, nama);
+            strcpy(listPassword, password);
             printf("\t\t\t\n **************** SIPPPP,Akun anda berhasil di buat *************\n\n");
+            printf("hasil penyalinan strtcpy = %s\n", nama);
             goto menu;
             break;
     case 2 :
@@ -112,6 +114,6 @@ int main()
         printf("bagus bagus isi bro\n");
         goto menu;
 
-}
         }
+}
 }
