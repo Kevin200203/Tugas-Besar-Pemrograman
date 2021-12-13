@@ -57,7 +57,6 @@ int main()
             strcpy(listUsername, nama);
             strcpy(listPassword, password);
             printf("\t\t\t\n **************** SIPPPP,Akun anda berhasil di buat *************\n\n");
-            printf("hasil penyalinan strtcpy = %s\n", nama);
             goto menu;
             break;
     case 2 :
