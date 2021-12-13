@@ -9,7 +9,7 @@ char kotak[10] = {'o', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 int cekMenang();
 void menampilkanPapan();
 
-int main()
+int ticTacToe()
 {
     system("color 78");
     int pemain = 1, i, pilihan;
