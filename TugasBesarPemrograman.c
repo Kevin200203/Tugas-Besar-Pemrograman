@@ -2,10 +2,16 @@
 #include <string.h>
 #include <windows.h>
 #include <stdbool.h>
+#include "game.h"
+
+
+int ticTacToe();
 
 
 int main()
 {
+    system("Color 0A");
+    int game; 
     int menu,i,member, simpanindex =0;
     char nama[25],namad[25],namab[25],email[25];
     char password[25],listPassword[20][25],listUsername[20][25];
@@ -24,7 +30,9 @@ int main()
     printf("\t\t\tTekan ENTER untuk melanjutkan");
     getchar();
     system("cls");
+
     menu :
+    system("Color 0A");
         printf("\n\t SILAHKAN PILIH MENU DIBAWAH INI\n\n");
         printf("1.DAFTAR AKUN                       2.Login                    3.Keluar \n\n");
         printf("=============");
@@ -105,6 +113,18 @@ int main()
         printf("|Nama Depan : %s            \n", namad);
         printf("|Nama Belakang : %s         \n", namab);
         printf("|Email : %s                 \n", email);
+
+        printf("\nPilih Game yang ingin dimaninkan");
+        printf("\n1. TicTacToe");
+        printf("\nPILIH GAME : ");
+        scanf("%d",&game);
+        
+         if(game == 1){
+            printf("berhasil");
+            ticTacToe();
+            system("cls");
+            goto menu;   
+        }
         break;
     case 3 :
         exit(0);
