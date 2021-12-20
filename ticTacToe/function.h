@@ -39,3 +39,52 @@ int cekMenang()
     else
         return -1;
 }
+
+
+void menambahAngka(){
+    int index;
+    for (index = 0; index < 10; index++)
+    {   
+        if (index == 0)
+        {
+            kotak[index] = 'o';
+        }
+        else if (index == 1)
+        {
+            kotak[index] = '1';
+        }
+        else if (index == 2)
+        {
+            kotak[index] = '2';
+        }
+        else if (index == 3)
+        {
+            kotak[index] = '3';
+        }
+        else if (index == 4)
+        {
+            kotak[index] = '4';
+        }
+        else if (index == 5)
+        {
+            kotak[index] = '5';
+        }
+        else if (index == 6)
+        {
+            kotak[index] = '6';
+        }
+        else if (index == 7)
+        {
+            kotak[index] = '7';
+        }
+        else if (index == 8)
+        {
+            kotak[index] = '8';
+        }
+        else if (index == 9)
+        {
+            kotak[index] = '9';
+        }
+        printf("%c", kotak);
+    }
+}

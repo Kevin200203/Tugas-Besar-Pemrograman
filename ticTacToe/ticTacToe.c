@@ -5,15 +5,17 @@
 #include <mmsystem.h>
 #include "function.h"
 
-char kotak[10] = {'o', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+char kotak[10];
+void menambahAngka();
 int cekMenang();
 void menampilkanPapan();
 
 int ticTacToe()
-{
+{   
     system("color 78");
     int pemain = 1, i, pilihan;
     char tanda; //X,O
+    menambahAngka();
     do
     {
 
@@ -50,7 +52,9 @@ int ticTacToe()
         i = cekMenang();
         pemain++;
     } while (i == -1);
-
+    
+   
+    
     menampilkanPapan();
     if (1 == 1)
     {
@@ -62,6 +66,8 @@ int ticTacToe()
     {
         printf("==> permainan seri");
     }
+    
+    
     getch();
     return 0;
 }
