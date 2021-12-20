@@ -2,7 +2,7 @@
 #include <string.h>
 #include <windows.h>
 #include <stdbool.h>
-#include "game.h"
+#include "unite.h"
 
 
 int ticTacToe();
@@ -10,13 +10,12 @@ int ticTacToe();
 
 int main()
 {
+    Pengguna pengguna1;
     system("Color 0A");
     int game; 
     int menu,i,member, simpanindex =0;
-    char nama[25],namad[25],namab[25],email[25];
-    char password[25],listPassword[20][25],listUsername[20][25];
     bool cekUser;
-    FILE *filelatihan;
+
     printf("\n\n");
     printf("\t\t  |===================================================================|\n");
     printf("\t\t  |===========================SnakeCross Mini Game====================|\n|");
@@ -43,27 +42,22 @@ int main()
         {
     case 1:
 
-        if((filelatihan=fopen("latihan.txt","a"))== NULL)
-            {
-				printf("file gagal diciptakan!\n");
-				exit(1);
-			}
             printf("\n\t|SILAHKAN LANJUTKAN UNTUK MEMBUAT AKUN|\n");
             printf("nama depan anda : ");
-            scanf("%s", namad);
+            scanf("%s", pengguna1.namad);
             printf("nama belakang anda : ");
-            scanf("%s", namab);
+            scanf("%s", pengguna1.namab);
             printf("Masukkan Email anda : ");
-            scanf("%s", email);
+            scanf("%s", pengguna1.email);
             printf("\t\t\t\t\t|==================================|\n");
             printf("\t\t\t\t\t| SELAMAT DATA ANDA BERHASIL DIBUAT|\n");
             printf("\t\t\t\t\t|Username : ");
-            scanf("%s", nama);
+            scanf("%s", pengguna1.nama);
             fflush(stdin);
             printf("\t\t\t\t\tBuat Password :");
-            scanf("%s", password);
-            strcpy(listUsername, nama);
-            strcpy(listPassword, password);
+            scanf("%s", pengguna1.password);
+            strcpy(pengguna1.listUsername, pengguna1.nama);
+            strcpy(pengguna1.listPaswword, pengguna1.password);
             printf("\t\t\t\n **************** SIPPPP,Akun anda berhasil di buat *************\n\n");
             goto menu;
             break;
@@ -73,13 +67,13 @@ int main()
 
                 printf("\t*Silahkan login akun yang telah didaftarkan*\n");
                 printf("\tUsername : ");
-                scanf("%s", nama);
+                scanf("%s", pengguna1.nama);
 
                 cekUser = false;
 
-                for(i = 0; listUsername[i][i] != '\0'; i++){
+                for(i = 0; pengguna1.listUsername[i][i] != '\0'; i++){
 
-                    if(strcmp(listUsername[i], nama) == 0){
+                    if(strcmp(pengguna1.listUsername[i], pengguna1.nama) == 0){
                         simpanindex = 1;
                         cekUser = true;
                     }
@@ -91,12 +85,12 @@ int main()
         }
         printf("\n");
         printf("\tMasukkan Password :");
-        scanf("%s", password);
+        scanf("%s", pengguna1.password);
         cekUser = false;
 
-                for(i = 0; listPassword[i][i] != '\0'; i++){
+                for(i = 0; pengguna1.listPaswword[i][i] != '\0'; i++){
 
-                    if(strcmp(listPassword[i], password) == 0){
+                    if(strcmp(pengguna1.listPaswword[i], pengguna1.password) == 0){
                         simpanindex = 1;
                         cekUser = true;
                     }
@@ -109,10 +103,10 @@ int main()
         printf("\t\t\t \n\nAnda Berhasil Login\n\n");
 
 
-        printf("|===========================welcome to  our SnakeCross mini game %s======================|\n", nama);
-        printf("|Nama Depan : %s            \n", namad);
-        printf("|Nama Belakang : %s         \n", namab);
-        printf("|Email : %s                 \n", email);
+        printf("|===========================welcome to  our SnakeCross mini game %s======================|\n", pengguna1.nama);
+        printf("|Nama Depan : %s            \n", pengguna1.namad);
+        printf("|Nama Belakang : %s         \n", pengguna1.namab);
+        printf("|Email : %s                 \n", pengguna1.email);
 
         printf("\nPilih Game yang ingin dimaninkan");
         printf("\n1. TicTacToe");
