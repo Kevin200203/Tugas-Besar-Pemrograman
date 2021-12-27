@@ -19,6 +19,7 @@ void main() {
   int i, member, simpanindex = 0;
   bool cekUser = false;
 
+
   layarMenunggu();
   system("Color 0A");
   
@@ -35,9 +36,6 @@ void main() {
     case 'G':
 
         masukanDataDiri(&pengguna1.namad,&pengguna1.namab,&pengguna1.email);
-          // printf("|Nama Depan : %s            \n", pengguna1.namad);
-          // printf("|Nama Belakang : %s         \n", pengguna1.namab);
-          // printf("|Email : %s                 \n", pengguna1.email);
         buatPasswordDanUsername(&pengguna1.username, &pengguna1.password);
 
           goto menu;
@@ -46,24 +44,39 @@ void main() {
           
     case 'a':
     case 'A': 
-
+          
         cekUser = cekUsernameDanPassword(&pengguna1.username, &pengguna1.password, &pengguna1.inputUsername, &pengguna1.inputPassword);
         if (cekUser){ 
+          menuGame:
+          system("Color 0A");
           char game = masukMenuGame(&pengguna1.namad, &pengguna1.namab);
           
             if (game == 'C' || game == 'c'){
+              layarMenunggu();
               ticTacToe();
-              goto menu;
+              goto menuGame;
             }else if (game == 'w' || game == 'W'){
-            printf("snake game");
-            }else{
+              menujuxy(40, 17);
+              printf("snake game");
+              goto menuGame;
+            }
+            else if (game == 'b' || game == 'B')
+            {
+              exit(0);
+            }
+
+            else{
+              menujuxy(40, 17);
               printf("pilihan anda salah");
+              goto menuGame;
             }
           
             
 
         }else{
-          printf("\t\nUsername atau password anda salah\n\n");
+          menujuxy(40, 17);
+          printf("\t\nUsername atau password Anda salah / Anda belum registrasi\n\n");
+          goto menu;
         }
         
 
@@ -75,8 +88,11 @@ void main() {
 
     break;
     
-    default : 
-        break;
+    default :
+      menujuxy(40, 17);
+      printf("pilihan anda salah");
+      goto menu;
+      break;
     }
 }
 
