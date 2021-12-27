@@ -1,9 +1,9 @@
 //header yang digunakan dalam pembuatan program game
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <windows.h>
-#include <stdbool.h>
+#include <stdio.h>   //header standar input output bahasa c
+#include <stdlib.h>	 //header standar input output bahasa c
+#include <string.h>  //header untuk menggunaakan fungsi array of char
+#include <windows.h> //header yang digunakan untuk menggunakan fungsi system cls
+#include <stdbool.h> //header yang digunakan untuk melakukan pengecekan benar atau salah
 #include <conio.h>
 #include <process.h>
 #include "ticTacToe/ticTacToe.h"
