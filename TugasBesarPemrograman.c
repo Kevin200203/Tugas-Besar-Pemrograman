@@ -1,4 +1,4 @@
-
+//header yang digunakan dalam pembuatan program game
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
