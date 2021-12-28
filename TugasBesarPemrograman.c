@@ -20,7 +20,7 @@ void main() {
   int i, member, simpanindex = 0;
   bool cekUser = false;
 
-  batuGuntingKertas();
+  
   layarMenunggu();  
   system("Color 0A");
   
