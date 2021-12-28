@@ -32,6 +32,7 @@ void batuGuntingKertas()
 
         do
         {
+            system("cls");
             srand(time(0));
             musuh = printRandoms(lower, upper, count);
             printf("ini Permainan Gunting, Batu , Kertas\n");
@@ -93,7 +94,6 @@ void batuGuntingKertas()
 
             printf("\n\n\tIngin main lagi (y/t) : ");
             scanf("%s", &ulang);
-           system("cls");
         } while (ulang == 'y' || ulang == 'Y');
         getch();
 }
