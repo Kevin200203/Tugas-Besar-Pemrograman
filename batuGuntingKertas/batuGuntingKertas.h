@@ -1,7 +1,7 @@
 #ifndef BATUGUNTINGKERTAS
 #define BATUGUNTINGKERTAS
 #include "function.C"
-int printRandoms();
+int Randoms();
 void batuGuntingKertas();
 
 #endif
