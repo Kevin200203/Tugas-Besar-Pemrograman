@@ -20,79 +20,85 @@ void main() {
   int i, member, simpanindex = 0;
   bool cekUser = false;
 
+  tampilkanJudul(); //fungsi digunakan untuk menamopilkan judul program 
+  layarMenunggu(); //fungsi digunakan untuk menamopilkan loading screen
+
+  system("Color 0A"); //fungsi digunakan untuk merubah background dan text terminal 
+
+  tampilkanSelamatDatang(); // fungsi digunakan untuk menampilkan kata selemat datang
   
-  layarMenunggu();  
-  system("Color 0A");
   
-  tampilkanSelamatDatang();
-  tampilkanJudul();
 
   menu:
   system("Color 0A");
-  menu = tampilkanMenu();
+  menu = tampilkanMenu(); 
 
 
     switch (menu){
     case 'g':
     case 'G':
-
-        masukanDataDiri(&pengguna1.namad,&pengguna1.namab,&pengguna1.email);
-        buatPasswordDanUsername(&pengguna1.username, &pengguna1.password);
-
-          goto menu;
     
-          break;
+      system("Color 0A");
+      masukanDataDiri(&pengguna1.namad, &pengguna1.namab, &pengguna1.email);
+      buatPasswordDanUsername(&pengguna1.username, &pengguna1.password);
+      layarMenunggu();
+      goto menu;
+
+      break;
           
     case 'a':
     case 'A': 
           
-        cekUser = cekUsernameDanPassword(&pengguna1.username, &pengguna1.password, &pengguna1.inputUsername, &pengguna1.inputPassword);
-        if (cekUser){ 
-          menuGame:
-          system("Color 0A");
-          char game = masukMenuGame(&pengguna1.namad, &pengguna1.namab);
           
-            if (game == 'C' || game == 'c'){
-              layarMenunggu();
-              ticTacToe();
-              goto menuGame;
-            }else if (game == 'w' || game == 'W'){
-              menujuxy(40, 17);
-              batuGuntingKertas();
-              goto menuGame;
-            }
-            else if (game == 'b' || game == 'B')
-            {
-              exit(0);
-            }
-
-            else{
-              menujuxy(40, 17);
-              printf("pilihan anda salah");
-              goto menuGame;
-            }
-          
+          cekUser = cekUsernameDanPassword(&pengguna1.username, &pengguna1.password, &pengguna1.inputUsername, &pengguna1.inputPassword);
+          if (cekUser){ 
+            menuGame:
+            layarMenunggu();
+            system("Color 0A");
+            char game = masukMenuGame(&pengguna1.namad, &pengguna1.namab);
             
+              if (game == 'C' || game == 'c'){
+                layarMenunggu();
+                ticTacToe();
+                goto menuGame;
+              }else if (game == 'w' || game == 'W'){
+                menujuxy(40, 17);
+                batuGuntingKertas();
+                goto menuGame;
+              }
+              else if (game == 'b' || game == 'B')
+              {
+                layarMenunggu();
+                exit(0);
+              }
 
-        }else{
-          menujuxy(40, 17);
-          printf("\t\nUsername atau password Anda salah / Anda belum registrasi\n\n");
-          goto menu;
-        }
+              else{
+                menujuxy(40, 17);
+                printf("pilihan anda salah");
+                goto menuGame;
+              }
+            
+              
+
+          }else{
+            menujuxy(40, 17);
+            printf("\t\nUsername atau password Anda salah / Anda belum registrasi\n\n");
+            goto menu;
+          }
         
-
+     break;
             
     case 'b':
     case 'B':
 
-    exit(0);
+          exit(0);
 
-    break;
+     break;
     
     default :
       menujuxy(40, 17);
-      printf("pilihan anda salah");
-      goto menu;
+        printf("pilihan anda salah");
+        goto menu;
       break;
     }
 }

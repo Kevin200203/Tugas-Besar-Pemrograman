@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <time.h>
+#include "../sistemLogin/sistemLogin.h"
 
-int printRandoms(int lower, int upper,
+int Randoms(int lower, int upper,
                   int count)
 {
     int i;
@@ -34,7 +35,7 @@ void batuGuntingKertas()
         {
             system("cls");
             srand(time(0));
-            musuh = printRandoms(lower, upper, count);
+            musuh = Randoms(lower, upper, count);
             printf("ini Permainan Gunting, Batu , Kertas\n");
             printf("\t\t1. Gunting\n");
             printf("\t\t2. Batu\n");
@@ -95,5 +96,8 @@ void batuGuntingKertas()
             printf("\n\n\tIngin main lagi (y/t) : ");
             scanf("%s", &ulang);
         } while (ulang == 'y' || ulang == 'Y');
+
+        printf("\n\nTekan ENTER untuk melanjutkan");
         getch();
+        layarMenunggu();
 }
