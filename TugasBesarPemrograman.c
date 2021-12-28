@@ -8,6 +8,7 @@
 #include <process.h>
 #include "ticTacToe/ticTacToe.h"
 #include "sistemLogin/sistemLogin.h"
+#include "batuGuntingKertas/batuGuntingKertas.h"
 
 
 
@@ -20,7 +21,8 @@ void main() {
   bool cekUser = false;
 
 
-  layarMenunggu();
+
+  layarMenunggu();  
   system("Color 0A");
   
   tampilkanSelamatDatang();
@@ -57,7 +59,7 @@ void main() {
               goto menuGame;
             }else if (game == 'w' || game == 'W'){
               menujuxy(40, 17);
-              printf("snake game");
+              batuGuntingKertas();
               goto menuGame;
             }
             else if (game == 'b' || game == 'B')

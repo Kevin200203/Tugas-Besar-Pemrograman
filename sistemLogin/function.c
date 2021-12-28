@@ -218,7 +218,7 @@ char masukMenuGame(char (*namad)[25],char (*namab)[25]){
         menujuxy(40, 20);
         printf("\t\t|                                                                                            |\n");
         menujuxy(40, 21);
-        printf("\t\t|                      C TicTacToe            W Snake                 B Keluar               |\n");
+        printf("\t\t|               C TicTacToe            W Batu Gunting Kertas          B Keluar               |\n");
         menujuxy(40, 22);
         printf("\t\t|                                                                                            |\n");
         menujuxy(40, 23);
