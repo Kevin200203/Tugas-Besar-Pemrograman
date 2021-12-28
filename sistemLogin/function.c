@@ -1,4 +1,4 @@
-// #include "sistemLogin.h"
+
 void menujuxy(int x, int y)
 {
         COORD coord;
@@ -151,8 +151,6 @@ void buatPasswordDanUsername(char (*username)[25],char (*password)[25]){
         menujuxy(40, 21);
         printf("\t\t                       Password : ");
         scanf("%s", password);
-        // strcpy(*pengguna1.listUsername, nama);
-        // strcpy(*pengguna1.listPaswword, password);
         menujuxy(40, 23);
         printf("\t\t===========================================================================================================\n");
         menujuxy(40, 24);
