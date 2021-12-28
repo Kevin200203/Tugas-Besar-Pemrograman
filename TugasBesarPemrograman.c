@@ -14,11 +14,11 @@
 
 void main() {
  
-
+  
   char menu;
   char game;
-  int i, member, simpanindex = 0;
-  bool cekUser = false;
+  int i, member; 
+  bool cekUser;
 
   tampilkanJudul(); //fungsi digunakan untuk menamopilkan judul program 
   layarMenunggu(); //fungsi digunakan untuk menamopilkan loading screen
