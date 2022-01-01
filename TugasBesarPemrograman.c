@@ -6,6 +6,8 @@
 #include <stdbool.h>
 #include <conio.h>
 #include <process.h>
+
+
 #include "ticTacToe/ticTacToe.h"
 #include "sistemLogin/sistemLogin.h"
 #include "batuGuntingKertas/batuGuntingKertas.h"
@@ -16,11 +18,11 @@ void main() {
  
   
   char menu;
-  char game;
-  int i, member; 
+  char game; 
   bool cekUser;
 
-  tampilkanJudul(); //fungsi digunakan untuk menamopilkan judul program 
+
+  tampilkanJudul(); //fungsi digunakan untuk menamopilkan judul program
   layarMenunggu(); //fungsi digunakan untuk menamopilkan loading screen
 
   system("Color 0A"); //fungsi digunakan untuk merubah background dan text terminal 
@@ -36,7 +38,7 @@ void main() {
   switch (menu) //nilai di dapatkan dari return nilai fungsi tampilkanmenu() yang di simpan ke variabel menu
   {
   case 'g':
-  case 'G':
+  case 'G'://registrasi
 
     system("Color 0A");
     masukanDataDiri(&pengguna1.namad, &pengguna1.namab, &pengguna1.email); // fungsi yang digunakan unutk meng input nilai data diri 
@@ -47,60 +49,68 @@ void main() {
     break;
 
   case 'a':
-  case 'A':
+  case 'A'://Login
 
-    cekUser = cekUsernameDanPassword(&pengguna1.username, &pengguna1.password, &pengguna1.inputUsername, &pengguna1.inputPassword);
-    if (cekUser)
-    {
-    menuGame:
-      layarMenunggu();
-      system("Color 0A");
-      char game = masukMenuGame(&pengguna1.namad, &pengguna1.namab);
 
-      if (game == 'C' || game == 'c')
+      cekUser = cekUsernameDanPassword(&pengguna1.username, &pengguna1.password, &pengguna1.inputUsername, &pengguna1.inputPassword); //fungsi  mengembalikan  nilai false / true
+      if (cekUser)
       {
+      menuGame:
         layarMenunggu();
-        ticTacToe();
-        goto menuGame;
-      }
-      else if (game == 'w' || game == 'W')
-      {
-        menujuxy(40, 17);
-        batuGuntingKertas();
-        goto menuGame;
-      }
-      else if (game == 'b' || game == 'B')
-      {
-        layarMenunggu();
-        exit(0);  //fungsi yang digunakan untuk keluar dari programs
-      }
+        system("Color 0A");
+        char game = masukMenuGame(&pengguna1.namad, &pengguna1.namab);
 
+            if (game == 'C' || game == 'c')
+            {
+              layarMenunggu();
+              ticTacToe();
+              goto menuGame;
+            }
+            else if (game == 'w' || game == 'W')
+            {
+              
+              batuGuntingKertas();
+              goto menuGame;
+            }
+            else if (game == 'b' || game == 'B')
+            {
+              layarMenunggu();
+              exit(0);  //fungsi yang digunakan untuk keluar dari programs
+            }
+
+            else
+            {
+            
+              system("Color 0C");
+             
+              printf("pilihan anda salah");
+              getch();
+              goto menuGame;
+            } 
+      } 
       else
       {
-        menujuxy(40, 17);
-        printf("pilihan anda salah");
-        goto menuGame;
+        
+        system("Color 0C");
+        printf("\t\tUsername atau password Anda salah / Anda belum registrasi\n\n");
+        getch();
+        goto menu;
       }
-    }
-    else
-    {
-      menujuxy(40, 17);//fungsi yang digunakan untuk mengarahkan ke kordinat yang di inginkan pada layar terminal
-      printf("\t\nUsername atau password Anda salah / Anda belum registrasi\n\n");
-      goto menu;
-    }
 
     break;
 
   case 'b':
-  case 'B':
+  case 'B'://keluar
 
     exit(0);
 
     break;
 
   default:
-    menujuxy(40, 17);
-    printf("pilihan anda salah");
+   
+    system("Color 0C");
+    printf("\t\tpilihan anda salah");
+    getch();
     goto menu;
     break;
     }

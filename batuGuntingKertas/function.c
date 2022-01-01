@@ -4,6 +4,10 @@
 #include <time.h>
 #include "../sistemLogin/sistemLogin.h"
 
+
+
+
+
 int Randoms(int lower, int upper,
                   int count)
 {
@@ -11,11 +15,11 @@ int Randoms(int lower, int upper,
     for (i = 0; i < count; i++)
     {
         int num = (rand() %
-                   (upper - lower + 1)) +
-                  lower;
+                   (upper - lower + 1)) + lower;
         return num;
     }
 }
+
 
 
 void batuGuntingKertas()
@@ -36,68 +40,95 @@ void batuGuntingKertas()
             system("cls");
             srand(time(0));
             musuh = Randoms(lower, upper, count);
+         
             printf("ini Permainan Gunting, Batu , Kertas\n");
+          
             printf("\t\t1. Gunting\n");
+           
             printf("\t\t2. Batu\n");
+           
             printf("\t\t3. Kertas\n");
-            printf("\nSilahkan Pilih Tanganmu : ");
+          
+            printf("Silahkan Pilih Tanganmu : ");
             scanf("%d", &player);
             if (musuh == 1 && player == 1)
             {
-                printf("\nCpu = Gunting vs Player = Gunting");
-                printf("\nPermainan Seri");
+                
+                printf("Cpu = Gunting vs Player = Gunting");
+               
+                printf("Permainan Seri");
             }
             else if (musuh == 1 && player == 2)
             {
-                printf("\nCpu = Gunting vs Player = Batu");
-                printf("\nPemenangnya Player");
+              
+                printf("Cpu = Gunting vs Player = Batu");
+                
+                printf("Pemenangnya Player");
             }
             else if (musuh == 1 && player == 3)
             {
-                printf("\nCpu = Gunting vs Player = Kertas");
-                printf("\nPemenangnya Cpu");
+               
+                printf("Cpu = Gunting vs Player = Kertas");
+               
+                printf("Pemenangnya Cpu");
             }
             else if (musuh == 2 && player == 1)
             {
-                printf("\nCpu = Batu vs Player = Gunting");
-                printf("\nPemenangnya Cpu");
+                
+                printf("Cpu = Batu vs Player = Gunting");
+                
+                printf("Pemenangnya Cpu");
             }
             else if (musuh == 2 && player == 2)
             {
-                printf("\nCpu = Batu vs Player = Batu");
-                printf("\nPermainan Seri");
+               
+                printf("Cpu = Batu vs Player = Batu");
+               
+                printf("Permainan Seri");
             }
             else if (musuh == 2 && player == 3)
             {
-                printf("\nCpu = Batu vs Player = Kertas");
-                printf("\nPemenangnya Player");
+               
+                printf("Cpu = Batu vs Player = Kertas");
+               
+                printf("Pemenangnya Player");
             }
             else if (musuh == 3 && player == 1)
             {
-                printf("\nCpu = Kertas vs Player = Gunting");
-                printf("\nPemenangnya Cpu");
+                
+                printf("Cpu = Kertas vs Player = Gunting");
+                
+                printf("Pemenangnya Cpu");
             }
             else if (musuh == 3 && player == 2)
             {
-                printf("\nCpu = Kertas vs Player = Batu");
-                printf("\nPemenangnya Cpu");
+                
+                printf("Cpu = Kertas vs Player = Batu");
+               
+                printf("Pemenangnya Cpu");
             }
             else if (musuh == 3 && player == 3)
             {
-                printf("\nCpu = Kertas vs Player = Kertas");
-                printf("\nPermainan Seri");
+                
+                printf("Cpu = Kertas vs Player = Kertas");
+                
+                printf("Permainan Seri");
             }
 
             else
             {
+                
                 printf("Masukan anda salah");
             }
 
-            printf("\n\n\tIngin main lagi (y/t) : ");
+            
+            printf("\tIngin main lagi (y/t) : ");
             scanf("%s", &ulang);
         } while (ulang == 'y' || ulang == 'Y');
 
-        printf("\n\nTekan ENTER untuk melanjutkan");
+            
+       
+        printf("Tekan ENTER untuk melanjutkan");
         getch();
         layarMenunggu();
 }
