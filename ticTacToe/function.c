@@ -52,7 +52,7 @@ void menampilkanPapan()
     
     
     
-    rule=fopen("C:/Users/LENOVO/Documents/tes.txt", "r");
+rule=fopen("C:/Users/LENOVO/Documents/GitHub/Tugas-Besar-Pemrograman/ticTacToe/Deskripsi game tictactoe.txt", "r");
 while(!feof(rule)){
   fgets(ticrule,100,rule);
   printf("%s", ticrule);
