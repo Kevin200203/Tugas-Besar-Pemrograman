@@ -174,33 +174,6 @@ void buatPasswordDanUsername(char (*username)[25],char (*password)[25]){
         
 }
 
-bool cekUsernameDanPassword( char (*username)[25], char (*password)[25], char (*inputUsername)[25], char (*inputPassword)[25]){
-        system("cls");
-        
-        printf("\t\t=========================================MASUKAN USERNAME DAN PASSWORD======================================\n\n");
-        
-        printf("\t\t                              Username : ");
-        scanf("%s", inputUsername);
-        printf("\n");
-        
-        printf("\t\t                              Password : ");
-        scanf("%s", inputPassword);
-        printf("\n");
-        
-        printf("\t\t============================================================================================================\n");
-        
-        printf("\t\t\tTekan ENTER untuk melanjutkan");
-        getch();
-        system("cls");
-
-        if (strcmp(*inputUsername, *username) == 0 && strcmp(*inputPassword, *password) == 0)
-        {
-           return true;      
-        }else
-        {
-            return false;
-        }
-}
 
 
 char masukMenuGame(char (*namad)[25],char (*namab)[25]){
