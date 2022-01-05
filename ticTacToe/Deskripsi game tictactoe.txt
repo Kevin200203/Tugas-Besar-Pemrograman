@@ -1,0 +1,12 @@
+
+
+Deskripsi Game TicTacToe :
+
+Game Tictactoe adalah game yang dimainkan didalam kotak 3 x 3. 
+Ini berarti papan tic-tac-toe berupa tiga baris yang masing-masing terdiri dari tiga buah persegi. 
+Adapun cara memainkan game tictactoe yaitu pemain pertama bermain dengan icon “X”, dan pemain kedua bermain dengan icon “O”. 
+Simbol-simbol ini akan digambar pada tabel, dalam usaha untuk menggambar tiga simbol yang sama dalam satu deret. 
+Pemain yang pertama kali menggambar tiga simbolnya dalam satu deret, entah secara horizontal, vertikal, ataupun diagonal, menjadi pemenang permainan. 
+Namun jika kedua pemain menggunakan strategi optimal, 
+kemungkinan besar tidak akan ada pemenang karena kalian akan saling memblokir kesempatan masing-masing untuk membuat tiga simbol dalam satu deret.
+
