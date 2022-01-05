@@ -6,7 +6,8 @@
 #include "../sistemLogin/sistemLogin.h"
 
 char kotak[10];
-
+FILE*rule;
+char ticrule[100];
 
 void petunjukPermainan(){
     
@@ -48,6 +49,16 @@ void menampilkanPapan()
     printf("\t\t|============================================ |_____|_____|_____| ============================================|\n");
    
     printf("\t\t|=============================================================================================================|\n");
+    
+    
+    
+    rule=fopen("C:/Users/LENOVO/Documents/tes.txt", "r");
+while(!feof(rule)){
+  fgets(ticrule,100,rule);
+  printf("%s", ticrule);
+}
+  fclose(rule);
+
 }
 
 int cekMenang()
